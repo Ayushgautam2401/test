@@ -1,0 +1,15 @@
+@import './mixin.scss';
+
+
+@include dynamic-property("margin","margin", 1 ,13 );
+ @include dynamic-property("margin-r","margin-right" ,1 ,13 );
+ @include dynamic-property("margin-b","margin-bottom" ,1 ,13 );
+ @include dynamic-property("margin-l","margin-left" ,1 ,13 );
+ @include dynamic-property("margin-t","margin-top" , 1 ,13 );
+
+
+
+ @include dynamic-property("padding", "padding" ,1 ,13 );
+ @include dynamic-property("padding-l","padding-left",1 ,13 );
+ @include dynamic-property("padding-b","padding-bottom",1 ,13 );
+ @include dynamic-property("padding-r","padding-right" ,1 ,13 );

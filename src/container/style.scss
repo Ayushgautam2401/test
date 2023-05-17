@@ -1,0 +1,169 @@
+$container-width : 1000;
+
+@function Half($width ) {
+    @return $width/2+px;
+}
+
+@function One-third($width) {
+    @return $width/3+px;
+}
+
+@function One-forth($width) {
+    @return $width/4+px;
+}
+
+.halfWidth {
+    width: Half($container-width);
+    background-color: red;
+}
+
+
+.oneThird {
+    width: One-third($container-width);
+    background-color: black;
+    margin-left: 10px;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.Main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // height: 100px;
+    overflow-y: auto;
+    
+
+}
+.top{
+  border: 1px solid black;
+}
+.Center{
+    overflow-x: scroll;
+    width: 50%;  
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    // height:  fit-content;
+    border: 1px solid black;
+}
+
+.Container{
+  padding-left: 10px;
+
+}
+
+.alignItem{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+  display:  flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.child{
+  background-color: white;
+  color: black;
+}
+
+.parent{
+  background-color: blue;
+  color: white;
+}
+
+.line{
+  // line-height: 100px;
+  // width: 50px;
+  // display: flex;
+  // flex-direction: column;
+  line-break: strict;
+}
+
+.ptani{
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 215px;
+      }
+      thead, tbody, tfoot {
+        display: table-cell;
+      }
+      thead, tfoot {
+        width: 80px;
+        padding-bottom: 16px;
+      }
+      tbody {
+        display: block;
+        table-layout: fixed;
+        width: 100px;
+        height: 200px;
+        overflow-x: auto;
+      }
+      tr, td {
+        border: 1px solid grey;
+        width: 100%;
+      }
+      td {
+        padding: 1rem;
+        white-space: nowrap;
+      }
+}
+
+.outerContent{
+  width: 100%;
+  padding: 5px;
+}
+
+.innerContent{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  justify-content: space-around;
+}
+.inner{
+background-color: #1E1E1E;
+color: white;
+}
+
+.test{
+  width: 100%;
+  height: 500px;
+  border: 1px solid red; 
+  display: flex;
+  flex-direction: row;
+}
+.left{
+  width: 60%;
+  height: 500px;
+  border: 1px solid red; 
+  display: flex;
+  flex-direction: row;
+  &-left1{
+    width: 40%;
+    border: 1px solid red; 
+  }
+  &-left2{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 15px;
+  }
+}
+.right{
+  width: 40%;
+  height: 500px;
+  border: 1px solid red; 
+}
+
