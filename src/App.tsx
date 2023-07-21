@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 // import './App.css';
 import CoustomTable from './table';
@@ -35,8 +35,11 @@ import Formik from './container/Formik/Formik';
 import GautoComplete from './container/GoogleAutoComplete/GautoComplete';
 import Test from './container/test';
 import Chat from './container/Chat/Chat';
+import CircularLoader from './container/Chat/loader';
+import Slider from './container/Chat/loader';
+import InputCalculation from './container/Input/InputCalculation';
 function App() {
-
+  const percentage = 100; 
   const items = [
     {
       image: "https://via.placeholder.com/100x100?text=Image+1",
@@ -62,6 +65,11 @@ function App() {
       description: "Description 3",
     },
   ];
+  const [rating, setRating] = useState(3);
+
+  const handleRatingChange = (value: number) => {
+    setRating(value);
+  };
 
   return (
     <>
@@ -114,9 +122,12 @@ function App() {
       {/* <LocationFile/> */}
       {/* <Map/>
       <Test/> */}
-      <Chat/>
+      {/* <Chat/> */}
       {/* <Formik/> */}
       {/* <GautoComplete/> */}
+      {/* <CircularLoader percentage={percentage}/> */}
+    {/* <Slider /> */}
+      <InputCalculation/>
     </>
   );
 }
